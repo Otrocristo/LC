@@ -1,0 +1,147 @@
+.eslogan {
+  background-image: url(../img/imagenone.jpeg);
+  width: auto;
+  padding: 15%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+}
+
+@-webkit-keyframes animacionInicio {
+  0% {
+    background-color: #A61C1C;
+  }
+  20% {
+    background-color: #731414;
+  }
+  40% {
+    background-color: #8C2029;
+  }
+  70% {
+    background-color: #731414;
+  }
+  100% {
+    background-color: #A61C1C;
+  }
+}
+
+@keyframes animacionInicio {
+  0% {
+    background-color: #A61C1C;
+  }
+  20% {
+    background-color: #731414;
+  }
+  40% {
+    background-color: #8C2029;
+  }
+  70% {
+    background-color: #731414;
+  }
+  100% {
+    background-color: #A61C1C;
+  }
+}
+.menuinicio {
+  background-color: #A61C1C;
+  width: 50%;
+  position: absolute;
+  top: 100%;
+  left: 45%;
+  -webkit-animation: animacionInicio 4s linear 0s infinite;
+          animation: animacionInicio 4s linear 0s infinite;
+}
+.menuinicio li a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu2 {
+  display: grid;
+  grid-template-areas: "item1 item2" "item3 item4";
+  justify-items: center;
+  grid-template-rows: 250px 250px;
+  align-items: center;
+  list-style: none;
+  border: 6px solid #731414;
+}
+.menu2 .item1 {
+  grid-area: item1;
+}
+.menu2 .item2 {
+  grid-area: item2;
+}
+.menu2 .item3 {
+  grid-area: item3;
+}
+.menu2 .item4 {
+  grid-area: item4;
+}
+
+.parrafo1 {
+  color: #222A59;
+  font-size: 30px;
+  position: absolute;
+  top: 100%;
+  left: 1%;
+  font-weight: 900;
+  font-style: italic;
+}
+.parrafo1 p {
+  display: grid;
+  grid-template-columns: 40%;
+}
+
+footer {
+  background-color: #A8ACBF;
+  color: #222A59;
+  position: absolute;
+  top: 190%;
+  padding: 10px;
+  text-align: center;
+  font-weight: 900;
+}
+
+/*MEDIA PARA PAGINA INICIO */
+@media (max-width: 425px) {
+  div footer {
+    position: absolute;
+    top: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .menu {
+    font-size: 0px;
+    position: absolute;
+    top: -10%;
+  }
+  .eslogan {
+    font-size: 10px;
+  }
+  .menuinicio {
+    position: absolute;
+    top: 42%;
+    left: 0%;
+    width: 100%;
+  }
+  .parrafo1 {
+    font-size: 20px;
+    position: absolute;
+    top: 135%;
+  }
+  .parrafo1 p {
+    display: grid;
+    grid-template-columns: 99%;
+  }
+  div footer {
+    position: absolute;
+    top: 190%;
+  }
+}
+@media (max-width: 1024px) {
+  div footer {
+    position: absolute;
+    top: 250%;
+  }
+}/*# sourceMappingURL=sass.css.map */
