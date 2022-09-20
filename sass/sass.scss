@@ -5,21 +5,21 @@
     width: auto;
     padding: 15%;
     text-align: center;
-    color: white;
+    color: map-get($map:$paleta, $key:secundario);
     font-size: 20px;
     font-style: italic;
 }
 
 @keyframes animacionInicio {
-    0% {background-color: #A61C1C;}
-    20% {background-color: #731414;}
-    40% {background-color: #8C2029;}
-    70% {background-color: #731414;}
-    100% {background-color: #A61C1C;};
+    0% {background-color: map-get($map:$paleta, $key:quinto)};
+    20% {background-color: map-get($map:$paleta, $key:cuarto)};
+    40% {background-color: map-get($map:$paleta, $key:sexto)};
+    70% {background-color: map-get($map:$paleta, $key:cuarto)};
+    100% {background-color: map-get($map:$paleta, $key:quinto)};
 }
 
 .menuinicio {
-  background-color: #A61C1C;
+  background-color: map-get($map:$paleta, $key:quinto);
   width: 50%;
   position: absolute;
   top: 100%;
@@ -27,7 +27,7 @@
   animation: animacionInicio 4s linear 0s infinite;
 
   li a {
-    color: white;
+    color: map-get($map: $paleta, $key:primario );
     text-decoration: none;
      }    
 }
@@ -43,28 +43,34 @@
     grid-template-rows: 250px 250px;
     align-items: center;
     list-style: none;
-    border: 6px solid #731414;
+    border: 6px solid map-get($map: $paleta, $key:cuarto );
 
+//MIXIN
+
+    @mixin iteem ($item){
+    grid-area: $item;
+    }
     
+
     .item1 {
-    grid-area: item1;
+    @include iteem(item1)
      }
 
     .item2 {
-    grid-area: item2;
+    @include iteem(item2)
      }
 
     .item3 {
-    grid-area: item3;
+    @include iteem(item3)
      }
 
      .item4 {
-    grid-area: item4;
+    @include iteem(item4)
      }
 }
 
 .parrafo1{
-  color: #222A59;
+  color: map-get($map:$paleta, $key:secundario);
   font-size: 30px;
   position: absolute;
   top: 100%;
@@ -80,8 +86,8 @@
 }
 
 footer {
-    background-color: #A8ACBF;
-    color: #222A59;
+    background-color: map-get($map:$paleta, $key:tercirio);
+    color: map-get($map:$paleta, $key:secundario);
     position: absolute;
     top: 190%;
     padding: 10px;
@@ -129,14 +135,25 @@ footer {
     }
 
     div footer{
-        position: absolute;
+        @extend .divfooter;
         top: 190%;
     }
 }
 
 @media (max-width: 1024px) {
     div footer{
-        position: absolute;
+        @extend .divfooter;
         top: 250%;
     }
 }
+
+// MAPS 
+
+$paleta: (
+    primario: white,
+    secundario: #222A59,
+    tercirio: #A8ACBF,
+    cuarto: #731414,
+    quinto: #A61C1C,
+    sexto:  #8C2029, 
+);

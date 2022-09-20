@@ -49,20 +49,7 @@ body {
     text-align: center;
 }
 
-/*MEDIA PARA PAGINA INICIO */
 
-@media (max-width: 425px) {
-    div footer{
-        position: absolute;
-        top: 50%;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .menu{
-      font-size: 0px;
-      po
 /* ESTILOS PARA PAGINA TRABAJOS DESTACADOS */
 
 .contenedor {
